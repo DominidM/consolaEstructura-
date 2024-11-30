@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA03313D-0E84-4952-8EB9-B37F19D2298E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>T1_Gestor_Medico_de_Referencias</RootNamespace>
+    <AssemblyName>T1_Gestor Medico de Referencias</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="extras\ayudaMenu.cs" />
+    <Compile Include="extras\infoDatos.cs" />
+    <Compile Include="extras\elementosDecoracion.cs" />
+    <Compile Include="formulario\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulario\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T1\0.1 listasSimples\0.1.0 pacienteLista\listaSimplePaciente.cs" />
+    <Compile Include="T1\0.1 listasSimples\0.1.0 pacienteLista\Nodo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T1\0.1 listasSimples\0.1.1 login\iniciarCuenta.cs" />
+    <Compile Include="T1\0.1 listasSimples\0.1.1 login\listaSimpleCreador.cs" />
+    <Compile Include="T1\0.1 listasSimples\0.1.1 login\nodoCreador.cs" />
+    <Compile Include="T1\0.2 listasDobles\0.2.0 trabajadoresListaDoble\listaDobleTrabajadores.cs" />
+    <Compile Include="T1\0.2 listasDobles\0.2.0 trabajadoresListaDoble\Nodo_Trabajadores.cs" />
+    <Compile Include="T1\0.2 listasDobles\0.2.1 hospitalesListaDoble\listaDobleSedes.cs" />
+    <Compile Include="T1\0.2 listasDobles\0.2.1 hospitalesListaDoble\nodoSedes.cs" />
+    <Compile Include="T1\0.2 listasDobles\0.2.2 ambulanciasListaDoble\listaDobleAmbulancias.cs" />
+    <Compile Include="T1\0.2 listasDobles\0.2.2 ambulanciasListaDoble\nodoAmbulancias.cs" />
+    <Compile Include="T2\1.1 listasCirculares\1.1.0 inventarioListaCircular\listaCircularInventario.cs" />
+    <Compile Include="T2\1.1 listasCirculares\1.1.0 inventarioListaCircular\nodoInventario.cs" />
+    <Compile Include="T2\1.1 listasCirculares\1.1.1 reporteListaCircular\listaCircularReporte.cs" />
+    <Compile Include="T2\1.1 listasCirculares\1.1.1 reporteListaCircular\nodoReporte.cs" />
+    <Compile Include="T2\1.2 pilas\1.2.0 movimientosPila\NodoMovimientos.cs" />
+    <Compile Include="T2\1.2 pilas\1.2.0 movimientosPila\pilaAmbulancias.cs" />
+    <Compile Include="T2\1.2 pilas\1.2.0 movimientosPila\pilaSedes.cs" />
+    <Compile Include="T2\1.2 pilas\1.2.0 movimientosPila\pilaAlmacen.cs" />
+    <Compile Include="T2\1.2 pilas\1.2.0 movimientosPila\pilaTrabajadores.cs" />
+    <Compile Include="T2\1.2 pilas\1.2.0 movimientosPila\pilaPacientes.cs" />
+    <Compile Include="T3\2.2 colaConPrioridad\1.3.0.1 ingresoAmbulanciasColaPrioridad\colaIngresoDeAmbulancias.cs" />
+    <Compile Include="T3\2.2 colaConPrioridad\1.3.0.1 ingresoAmbulanciasColaPrioridad\nodoColaPrioAmbulancias.cs" />
+    <Compile Include="T2\1.3 colas\1.3.1 colaSinPrioridad\1.3.1.1 Almacen\colaAlmacen.cs" />
+    <Compile Include="T2\1.3 colas\1.3.1 colaSinPrioridad\1.3.1.1 Almacen\nodoAlmacen.cs" />
+    <Compile Include="T3\2.1 arbol Referencia\arbolVacunacion.cs" />
+    <Compile Include="T3\2.1 arbol Referencia\nodoArbol.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
